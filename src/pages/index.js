@@ -38,7 +38,7 @@ export default function Home() {
 
   const cta = {
     main: 'Regístrate, da clic',
-    description: 'Regístrate para entrar a la etapa 1 de Preventa',
+    description: 'Agenda una visita y comienza a vivir tu nueva vida',
   };
 
   return (
@@ -56,7 +56,7 @@ export default function Home() {
             className="md:w-2/3 relative font-bold ft-11 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             A 10 min del periférico (con tráfico) y te entregamos en 15 días
           </h1>
-          <p className="ft-3 mt-4">Casas desde $5.4 MDP</p>
+          <p className="ft-3 mt-4">Casas desde $5.5 MDP</p>
           <div className="flex flex-col justify-start items-start mt-12">
             {/*<Link href="#contact">*/}
             {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="flex flex-col">
             <h3>Entrega en 15 días</h3>
             <p className="ft-2 mb-8">Compra hoy y múdate en 15 días. Sin cuentos, sin retrasos</p>
-            <div className="relative h-[48rem] rounded-2xl overflow-hidden flex items-center mb-8">
+            <div className="relative h-[48rem] rounded-2xl overflow-hidden flex items-center mt-auto mb-8">
               <Image src={i02} layout="fill" objectFit="cover"/>
             </div>
           </div>
