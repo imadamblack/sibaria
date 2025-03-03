@@ -88,7 +88,7 @@ export default function Home() {
         image={i01}
       />
       <section className="my-16">
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+        <div className="container grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="flex flex-col">
             <h3>Entrega en 15 días</h3>
             <p className="ft-2 mb-8">Compra hoy y múdate en 15 días. Sin cuentos, sin retrasos</p>
@@ -126,7 +126,7 @@ export default function Home() {
         title="Aquí la vida ya está pasando y tú sigues viendo renders en otros lados"
         image={i05}
       />
-      <section className="px-16 my-16 md:space-y-32">
+      <section className="px-16 my-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div className="relative w-full items-stretch pt-[100%] lg:pt-[200%] rounded-xl overflow-hidden">
             <Image src={i06} layout="fill" className="object-cover z-0"/>
@@ -173,7 +173,7 @@ export default function Home() {
         title="Con todo lo necesario para que vivas increíble o lo rentes de inmediato"
         image={i05}
       />
-      <section className="container my-16 md:space-y-32">
+      <section className="container my-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="w-full flex gap-8 items-stretch border-2 border-brand-2 rounded-3xl p-12">
             <div className="relative w-1/3 overflow-hidden">
@@ -224,7 +224,7 @@ export default function Home() {
 
         </div>
 
-        <div className="flex flex-col justify-center items-center mt-16">
+        <div className="flex flex-col justify-center mt-16 items-center">
           <Link href="#contact">
             <a onClick={() => setLastClick('specs')} className="button mb-4">{cta.main}</a>
           </Link>
@@ -370,11 +370,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="reading-container flex flex-col justify-center items-center mt-16">
+        <div className="flex flex-col justify-center items-center mt-16">
           <Link href="#contact">
             <a onClick={() => setLastClick('target')} className="button mb-4">{cta.main}</a>
           </Link>
-          <p className="-ft-2 text-center">{cta.description}</p>
+          <p className="-ft-2 text-center text-white">{cta.description}</p>
         </div>
 
       </section>
