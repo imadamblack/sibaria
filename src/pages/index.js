@@ -56,7 +56,7 @@ export default function Home() {
             className="md:w-2/3 relative font-bold ft-11 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
             A 10 min del periférico (con tráfico) y te entregamos en 15 días
           </h1>
-          <p className="ft-3 mt-4">Casas desde $5.5 MDP</p>
+          <p className="ft-3 mt-4">Casas al sur de Guadalajara desde $5.5 MDP</p>
           <div className="flex flex-col justify-start items-start mt-12">
             {/*<Link href="#contact">*/}
             {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
