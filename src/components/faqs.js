@@ -18,7 +18,7 @@ export default function Faqs() {
     },
     {
       q: "¿Hay opciones para personalizar mi casa?",
-      a: "El diseño es homogéneo para que el desarrollo suba de valor y así, tu patrimonio también, pero puedes hacer ajustes en interiores por tu cuenta."
+      a: "El diseño es homogéneo para que el desarrollo suba de valor y así, tu patrimonio también."
     },
     {
       q: "¿Puedo comprar para inversión?",
