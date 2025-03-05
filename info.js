@@ -13,8 +13,8 @@ export const info = {
     message: "Buen día, me puede dar más información sobre las casas de Sibaria Residencial",
   },
   social: {
-    facebook: "florencia.creato",
-    instagram: "florencia_gardens",
+    facebook: "Sibariaresidencial",
+    instagram: "sibariaresidencial",
   },
   address: {
     address: "Av. Adolfo López Mateos Sur 1710",
