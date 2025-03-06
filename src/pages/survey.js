@@ -11,12 +11,11 @@ import { restrictNumber } from '../utils/formValidators';
 const formSteps = [
   {
     name: 'intention',
-    title: `Ok, prometo hacer esto lo más rápido y sencillo posible, <br/>son solo 5 preguntas.`,
-    description: '¿Con qué fin estás buscando comprar?',
+    title: `Ok, ya debes tener el brochure en tu correo. <br/>¿Puedes compartirme con qué fin estás buscando comprar?`,
     type: 'radio',
     options: [
-      {value: 'inversion', label: 'Inversión a largo plazo'},
-      {value: 'rentar', label: 'Rentarlo y generar ingresos pasivos'},
+      {value: 'rentas', label: 'Planeo ponerla en renta'},
+      {value: 'segunda-casa', label: 'Como segunda casa'},
       {value: 'vivienda', label: 'Quiero vivir ahí'},
     ],
     cols: 1,

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import OptInForm from '../components/form/opt-in-form';
 import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
+import Faqs from '../components/faqs';
+
 import i00 from '../../public/landing/000.png';
 import i01 from '../../public/landing/01.png';
 import i02 from '../../public/landing/001.png';
@@ -22,9 +24,6 @@ import ico02 from '../../public/landing/icons/02.png';
 import ico03 from '../../public/landing/icons/03.png';
 import ico04 from '../../public/landing/icons/04.png';
 import i13 from '../../public/landing/012.png';
-import i14 from '../../public/landing/013.png';
-import i15 from '../../public/landing/014.png';
-import Faqs from '../components/faqs';
 
 export default function Home() {
   const [lastClick, setLastClick] = useState('');
@@ -37,8 +36,8 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Regístrate, da clic',
-    description: 'Agenda una visita y comienza a vivir tu nueva vida',
+    main: 'Conoce nuestros modelos de casas, da clic',
+    description: 'Registrate para descargar las fichas de nuestras casas',
   };
 
   return (
@@ -47,38 +46,34 @@ export default function Home() {
 
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
-            className="w-full h-full absolute bg-gradient-to-t from-brand-1 md:from-black via-transparent to-transparent md:opacity-60 z-10"/>
-          <Image src={i00} layout="fill" className="object-cover object-right"/>
+            className="w-full h-[24rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-black via-transparent to-transparent md:opacity-60 z-10"/>
+          <Image src={i13} layout="fill" className="object-cover object-right"/>
         </div>
 
         <div className="container w-full text-left text-white z-10 p-8">
           <h1
             className="md:w-2/3 relative font-bold ft-11 text-white [text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            A 10 min del periférico (con tráfico) y te entregamos en 15 días
+            Vive en la Gourmetería
           </h1>
-          <p className="ft-3 mt-4">Casas al sur de Guadalajara desde $5.5 MDP</p>
+          <p className="ft-3 mt-4">A 10 min del periférico sur</p>
+          <p className="ft-3 mt-4">Listas para entrega en 15 días</p>
+          <p className="ft-3 mt-4">Desde $5.5 MDP</p>
           <div className="flex flex-col justify-start items-start mt-12">
-            {/*<Link href="#contact">*/}
-            {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
-            {/*</Link>*/}
+            <Link href="#contact">
+              <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
+            </Link>
             <p className="-ft-2 md:text-left">{cta.description}</p>
           </div>
           <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
-
         </div>
       </section>
 
       <section className="reading-container my-16">
-        {/*<div className="relative">*/}
-        {/*  <Image src={i01} layout="fill" objectFit="cover"/>*/}
-        {/*</div>*/}
-
         <p className="ft-2">
           Si quieres vivir en una zona exclusiva sin los cuentos de “te la entregamos en un año”, bienvenido a Sibaria.
           <br/><br/>
           Seguridad, ubicación premium y amenidades listas para que te mudes en 15 días.
         </p>
-
       </section>
 
       <Blockbuster
@@ -287,71 +282,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/*<Blockbuster*/}
-      {/*  overhead="Modelos"*/}
-      {/*  title="Tenemos la envasadora que necesitas para tus productos"*/}
-      {/*  image={i11}*/}
-      {/*/>*/}
-      {/*<section className="container my-16">*/}
-      {/*  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">*/}
-      {/*    <div className="flex flex-col w-full rounded-2xl overflow-hidden border border-gray-400">*/}
-      {/*      <div className="relative w-full h-[30rem]">*/}
-      {/*        <Image src={i12} layout="fill" objectFit="cover"/>*/}
-      {/*      </div>*/}
-      {/*      <div className="p-8">*/}
-      {/*        <h3 className="ft-3">Envasadora Premium Chica</h3>*/}
-      {/*        <p className="ft-2 mb-8 font-bold">$350,000.00 MXN</p>*/}
-      {/*        <hr/>*/}
-      {/*        <ul className="mt-8 space-y-4">*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Para presentaciones pequeñas</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Hasta 16,000 bolsas por día*</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Granulados pequeños, polvos, semi líquidos o pastosos.*/}
-      {/*          </li>*/}
-      {/*        </ul>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*    <div className="flex flex-col w-full rounded-2xl overflow-hidden border border-gray-400">*/}
-      {/*      <div className="relative w-full h-[30rem]">*/}
-      {/*        <Image src={i13} layout="fill" objectFit="cover"/>*/}
-      {/*      </div>*/}
-      {/*      <div className="p-8">*/}
-      {/*        <h3 className="ft-3">Envasadora Premium Grande</h3>*/}
-      {/*        <p className="ft-2 mb-8 font-bold">$1’000,000.00 MXN</p>*/}
-      {/*        <hr/>*/}
-      {/*        <ul className="mt-8 space-y-4">*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Para presentaciones grandes</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Hasta 10,000 bolsas por día*</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Frituras, granulados, polvos, semi líquidos o pastosos.*/}
-      {/*          </li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Capacidad de hasta 1.2kg** de producto.</li>*/}
-      {/*        </ul>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*    <div className="flex flex-col w-full rounded-2xl overflow-hidden border border-gray-400">*/}
-      {/*      <div className="relative w-full h-[30rem]">*/}
-      {/*        <Image src={i14} layout="fill" objectFit="cover"/>*/}
-      {/*      </div>*/}
-      {/*      <div className="p-8">*/}
-      {/*        <h3 className="ft-3">Envasadora Multicabezal</h3>*/}
-      {/*        <p className="ft-2 mb-8 font-bold">$1’500,000.00 MXN</p>*/}
-      {/*        <hr/>*/}
-      {/*        <ul className="mt-8 space-y-4">*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Para presentaciones pequeñas y grandes</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Hasta 15,000 bolsas por día*</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Granulados pequeños, frituras voluminosas.</li>*/}
-      {/*          <li className="before:content-['›'] before:mr-4">Capacidad de hasta 3kg** de producto.</li>*/}
-      {/*        </ul>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*  <div className="flex flex-col justify-center items-center mt-16">*/}
-      {/*    <Link href="#contact">*/}
-      {/*      <a onClick={() => setLastClick('models')} className="button mb-4">{cta.main}</a>*/}
-      {/*    </Link>*/}
-      {/*    <p className="-ft-2 text-center">{cta.description}</p>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-
       <Blockbuster
         overhead="Garantías"
         title="Comprar tu casa en Sibaria Residencial es tan lógico como inevitable"
@@ -382,7 +312,7 @@ export default function Home() {
       <Blockbuster
         overhead="Preguntas frecuentes"
         title="Todo lo que quieres saber antes de mudarte a Sibaria está aquí"
-        image={i13}
+        image={i00}
       />
       <section className="container py-8">
         <Faqs/>
@@ -393,11 +323,11 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Agenda tu visita ahora y conoce tu nueva casa en Sibaria Residencial
+              Descarga nuestro brochure para que tengas más info sobre tu nueva casa
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
-                Déjanos tus datos y agenda una videollamada para darte más información sobre tu nueva casa.
+                Déjanos tus datos para enviarte más información a tu correo y agenda una videollamada para que nos compartas tus dudas.
               </p>
             </div>
             <OptInForm
