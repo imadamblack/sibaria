@@ -36,7 +36,7 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Conoce nuestros modelos de casas, da clic',
+    main: 'Conoce nuestras casas, da clic',
     description: 'Registrate para descargar las fichas de nuestras casas',
   };
 
