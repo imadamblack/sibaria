@@ -36,13 +36,13 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Conoce nuestras casas, da clic',
-    description: 'Registrate para descargar las fichas de nuestras casas',
+    main: 'Contáctanos, da clic',
+    description: 'Registrate para programar una llamada',
   };
 
   return (
     <>
-      <section className="relative min-h-[80vh] w-full flex flex-col md:justify-end items-center bg-brand-1">
+      <section className="relative min-h-[72rem] w-full flex flex-col md:justify-end items-center bg-brand-1">
 
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
@@ -56,8 +56,8 @@ export default function Home() {
             Vive en la Gourmetería
           </h1>
           <p className="ft-3 mt-4">A 10 min del periférico sur</p>
-          <p className="ft-3 mt-4">Listas para entrega en 15 días</p>
-          <p className="ft-3 mt-4">Desde $5.5 MDP</p>
+          <p className="ft-3">Listas para entrega en 15 días</p>
+          <p className="ft-3">Desde $5.5 MDP</p>
           <div className="flex flex-col justify-start items-start mt-12">
             <Link href="#contact">
               <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
@@ -323,11 +323,11 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Descarga nuestro brochure para que tengas más info sobre tu nueva casa
+              Es momento de que conozcas tu nuevo hogar.
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
-                Déjanos tus datos para enviarte más información a tu correo y agenda una videollamada para que nos compartas tus dudas.
+                Si llegaste hasta acá, compártenos tus datos para programar una llamada y platicarte más sobre Sibaria.
               </p>
             </div>
             <OptInForm
