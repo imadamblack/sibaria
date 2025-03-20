@@ -12,10 +12,10 @@ import i02 from '../../public/landing/001.png';
 import i03 from '../../public/landing/002.png';
 import i04 from '../../public/landing/003.png';
 import i05 from '../../public/landing/004.png';
-import i06 from '../../public/landing/005.png';
+import i06 from '../../public/landing/005.jpg';
 import i07 from '../../public/landing/006.png';
 import i08 from '../../public/landing/007.png';
-import i09 from '../../public/landing/008.png';
+import i09 from '../../public/landing/008.jpg';
 import i10 from '../../public/landing/009.png';
 import i11 from '../../public/landing/010.png';
 import i12 from '../../public/landing/011.png';
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-full items-stretch pt-[100%] lg:pt-[200%] rounded-xl overflow-hidden">
-            <Image src={i07} layout="fill" className="object-cover z-0"/>
+            <Image src={i07} layout="fill" className="object-cover object-bottom z-0"/>
             <div className="relative w-full md:h-[14rem] z-10 bg-brand-2 p-12 bottom-0">
               <h3 className="ft-5 font-bold">Pista de Jogging</h3>
             </div>
@@ -144,7 +144,7 @@ export default function Home() {
           <div className="relative w-full items-stretch pt-[100%] lg:pt-[200%] rounded-xl overflow-hidden">
             <Image src={i09} layout="fill" className="object-cover z-0"/>
             <div className="relative w-full md:h-[14rem] z-10 bg-brand-2 p-12 bottom-0">
-              <h3 className="ft-5 font-bold">Casa Club y Sport Bar</h3>
+              <h3 className="ft-5 font-bold">Sport Bar</h3>
             </div>
           </div>
           <div className="relative w-full items-stretch pt-[100%] lg:pt-[200%] rounded-xl overflow-hidden">
