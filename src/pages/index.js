@@ -36,7 +36,7 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Contáctanos, da clic',
+    main: 'Mándanos un WhatsApp, da clic',
     description: 'Registrate para programar una llamada',
   };
 
@@ -327,7 +327,7 @@ export default function Home() {
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
-                Si llegaste hasta acá, compártenos tus datos para programar una llamada y platicarte más sobre Sibaria.
+                Si llegaste hasta acá, compártenos unos datos y mándanos un WhatsApp para darte más info de tu nueva casa.
               </p>
             </div>
             <OptInForm

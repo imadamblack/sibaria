@@ -35,6 +35,15 @@ export default function OptInForm({lastClick = ''}) {
         'Content-Type': 'application/json',
       },
     }).then((result) => result.json())
+      // // Send FB Event
+      // .then(({id}) => {
+      //   fbEvent(
+      //     'Lead',
+      //     {email: data.email, phone: data.phone, externalID: id},
+      //   );
+      //   setCookie('lead', {...data, id});
+      //   router.push(`/survey?id=${id}`);
+      // })
       // Send FB Event
       .then(({id}) => {
         fbEvent(
@@ -42,7 +51,11 @@ export default function OptInForm({lastClick = ''}) {
           {email: data.email, phone: data.phone, externalID: id},
         );
         setCookie('lead', {...data, id});
-        router.push(`/survey?id=${id}`);
+        const forwardLink = document.createElement('a');
+        forwardLink.href = `https://wa.me/${info.whatsapp.value}`;
+        forwardLink.target = '_blank';
+        forwardLink.click();
+        router.push(`/thankyou`);
       })
       .catch(() => {
         fbEvent(
@@ -93,7 +106,7 @@ export default function OptInForm({lastClick = ''}) {
           className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-3'}`}
         >{
           !sending
-            ? 'Enviar →'
+            ? 'Enviar WhatsApp →'
             : <span className="material-symbols-outlined animate-spin">progress_activity</span>
         }</button>
 

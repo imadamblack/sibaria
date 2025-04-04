@@ -11,7 +11,7 @@ export default function ThankYou() {
           Muy pronto, uno de nuestros asesores se pondrá en contacto contigo para darte más info sobre Sibaria Residencial.
         </p>
         <p className="text-center ft-2">
-          Si no se abrió nuestro calendario para agendar tu asesoría gratuita
+          Si no se abrió tu WhatsApp
         </p>
         <div className="flex flex-col items-center justify-center gap-10">
           <a
@@ -22,14 +22,14 @@ export default function ThankYou() {
             <span className="material-icons">arrow_forward</span>Da click aquí
             <span className="text-white material-icons">arrow_back</span>
           </a>
-          <a
-            className="ft-2 py-3 px-6 rounded-lg items-center  bg-green-500 hover:bg-green-600 transition-all hover:scale-105"
-            href={`https://wa.me/${info.whatsapp.value}`}
-          >
-            <p className="text-white">
-              O contáctanos por <span className="font-semibold">WhatsApp</span>
-            </p>
-          </a>
+          {/*<a*/}
+          {/*  className="ft-2 py-3 px-6 rounded-lg items-center  bg-green-500 hover:bg-green-600 transition-all hover:scale-105"*/}
+          {/*  href={`https://wa.me/${info.whatsapp.value}`}*/}
+          {/*>*/}
+          {/*  <p className="text-white">*/}
+          {/*    O contáctanos por <span className="font-semibold">WhatsApp</span>*/}
+          {/*  </p>*/}
+          {/*</a>*/}
         </div>
       </div>
     </section>
