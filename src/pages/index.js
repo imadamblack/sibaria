@@ -36,8 +36,8 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Mándanos un WhatsApp, da clic',
-    description: 'Registrate para programar una llamada',
+    main: 'Descubre tu nuevo hogar, da clic',
+    description: 'Últimas casas disponibles con entrega inmediata',
   };
 
   return (
@@ -62,7 +62,7 @@ export default function Home() {
             <Link href="#contact">
               <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
             </Link>
-            <p className="-ft-2 md:text-left">{cta.description}</p>
+            <p className="ft-0 md:text-left">{cta.description}</p>
           </div>
           <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
         </div>
@@ -109,7 +109,7 @@ export default function Home() {
         <div className="reading-container">
           <div className="flex flex-col justify-center items-center">
             <Link href="#contact">
-              <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
+              <a onClick={() => setLastClick('benefits')} className="button mb-4">Quiero conocer más detalles</a>
             </Link>
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
@@ -157,7 +157,7 @@ export default function Home() {
 
         <div className="flex flex-col justify-center items-center mt-16">
         <Link href="#contact">
-            <a onClick={() => setLastClick('specs')} className="button mb-4">{cta.main}</a>
+            <a onClick={() => setLastClick('specs')} className="button mb-4">Solicita una visita</a>
           </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
@@ -323,11 +323,11 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Es momento de que conozcas tu nuevo hogar.
+              Contáctanos hoy y conoce las últimas casas de entrega inmediata.
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
-                Si llegaste hasta acá, compártenos unos datos y mándanos un WhatsApp para darte más info de tu nueva casa.
+                Si llegaste hasta acá, compártenos unos datos y te enviamos modelos, precios y promociones del mes.
               </p>
             </div>
             <OptInForm
