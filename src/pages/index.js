@@ -35,6 +35,9 @@ export default function Home() {
     });
   });
 
+  const date = new Date();
+  const month = date.toLocaleDateString('es-MX',{month: 'long'});
+
   const cta = {
     main: 'Descubre tu nuevo hogar, da clic',
     description: 'Últimas casas disponibles con entrega inmediata',
@@ -62,9 +65,11 @@ export default function Home() {
             <Link href="#contact">
               <a onClick={() => setLastClick('benefits')} className="button mb-4">{cta.main}</a>
             </Link>
-            <p className="ft-0 md:text-left">{cta.description}</p>
           </div>
           <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
+        </div>
+        <div className="w-full py-6 bg-red-500 z-50">
+          <p className="ft-0 text-center text-white font-bold mx-auto">{cta.description}</p>
         </div>
       </section>
 
@@ -323,7 +328,7 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Contáctanos hoy y conoce las últimas casas de entrega inmediata.
+              Contáctanos hoy y conoce las promociones de {month}.
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
