@@ -42,6 +42,9 @@ export default function Home() {
   const month = date.toLocaleDateString('es-MX', {month: 'long'});
   date.setMonth(date.getMonth() + 3);
   const endMonth = date.toLocaleString('es-MX', {month:'long'});
+  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+
+  console.log(lastDay);
 
   const cta = {
     main: 'Descubre tu nuevo hogar, da clic',
@@ -355,7 +358,7 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Visítanos en {month} y si compras antes del 30 de {endMonth}, te regalamos un año de mantenimiento.
+              Visítanos en {month} y si compras antes del {lastDay} de {endMonth}, te regalamos un año de mantenimiento.
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
