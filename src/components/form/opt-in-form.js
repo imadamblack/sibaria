@@ -106,9 +106,11 @@ export default function OptInForm({lastClick = ''}) {
           className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-3'}`}
         >{
           !sending
-            ? 'Enviar WhatsApp →'
+            ? 'Enviar →'
             : <span className="material-symbols-outlined animate-spin">progress_activity</span>
         }</button>
+
+        <a href={`https://wa.me/${info.whatsapp.value}`} className="button-secondary !w-full">Prefiero enviar WhatsApp</a>
 
         <div className="mt-4">
           <p className="-ft-3 text-center text-white">Al dar clic aceptas nuestra&nbsp;

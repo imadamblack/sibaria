@@ -5,6 +5,7 @@ import OptInForm from '../components/form/opt-in-form';
 import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
 import Faqs from '../components/faqs';
+import { info } from '../../info';
 
 import i00 from '../../public/landing/000.png';
 import i01 from '../../public/landing/01.png';
@@ -24,6 +25,8 @@ import ico02 from '../../public/landing/icons/02.png';
 import ico03 from '../../public/landing/icons/03.png';
 import ico04 from '../../public/landing/icons/04.png';
 import i13 from '../../public/landing/012.png';
+import whatsapp from '../../public/whatsapp.svg'
+import fbEvent from '../services/fbEvents';
 
 export default function Home() {
   const [lastClick, setLastClick] = useState('');
@@ -36,7 +39,9 @@ export default function Home() {
   });
 
   const date = new Date();
-  const month = date.toLocaleDateString('es-MX',{month: 'long'});
+  const month = date.toLocaleDateString('es-MX', {month: 'long'});
+  date.setMonth(date.getMonth() + 3);
+  const endMonth = date.toLocaleString('es-MX', {month:'long'});
 
   const cta = {
     main: 'Descubre tu nuevo hogar, da clic',
@@ -59,7 +64,7 @@ export default function Home() {
             Vive en la Gourmetería
           </h1>
           <p className="ft-3 mt-4">A 10 min del periférico sur</p>
-          <p className="ft-3">Listas para entrega en 15 días</p>
+          <p className="ft-3">Casas con entrega inmediata</p>
           <p className="ft-3">Desde $5.5 MDP</p>
           <div className="flex flex-col justify-start items-start mt-12">
             <Link href="#contact">
@@ -68,9 +73,9 @@ export default function Home() {
           </div>
           <p className="material-icons animate-bounce"><span className="ft-9">expand_more</span></p>
         </div>
-        <div className="w-full py-6 bg-red-500 z-50">
-          <p className="ft-0 text-center text-white font-bold mx-auto">{cta.description}</p>
-        </div>
+        {/*<div className="w-full py-6 bg-red-500 z-50">*/}
+        {/*  <p className="ft-0 text-center text-white font-bold mx-auto">{cta.description}</p>*/}
+        {/*</div>*/}
       </section>
 
       <section className="reading-container my-16">
@@ -161,7 +166,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col justify-center items-center mt-16">
-        <Link href="#contact">
+          <Link href="#contact">
             <a onClick={() => setLastClick('specs')} className="button mb-4">Solicita una visita</a>
           </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
@@ -246,7 +251,8 @@ export default function Home() {
                   <div className="material-icons ft-11 text-brand-1">format_quote</div>
                 </div>
                 <p className="ft-2">
-                  Nos prometieron una casa lista y lo cumplieron. Nos mudamos en 15 días a partir de que firmamos, fue la mejor decisión. 10/10 recomendado.
+                  Nos prometieron una casa lista y lo cumplieron. Nos mudamos en 15 días a partir de que firmamos, fue
+                  la mejor decisión. 10/10 recomendado.
                 </p>
                 <div className="mt-auto">
                   <p className="text-brand-1 ft-4 font-bold">Javier R</p>
@@ -259,7 +265,8 @@ export default function Home() {
                   <div className="material-icons ft-11 text-brand-1">format_quote</div>
                 </div>
                 <p className="ft-2">
-                  Invertimos aquí porque nos dio confianza ver todo terminado, las casas, las amenidades, estamos muy felices de haber comprado aquí.
+                  Invertimos aquí porque nos dio confianza ver todo terminado, las casas, las amenidades, estamos muy
+                  felices de haber comprado aquí.
                 </p>
                 <div className="mt-auto">
                   <p className="text-brand-1 ft-4 font-bold">Ana M</p>
@@ -272,7 +279,8 @@ export default function Home() {
                   <div className="material-icons ft-11 text-brand-1">format_quote</div>
                 </div>
                 <p className="ft-2">
-                  Las amenidades son un hit. Mis hijos aman la alberca, todos en la familia estamos disfrutando vivir aquí. Vivir aquí es como estar siempre de vacaciones.
+                  Las amenidades son un hit. Mis hijos aman la alberca, todos en la familia estamos disfrutando vivir
+                  aquí. Vivir aquí es como estar siempre de vacaciones.
                 </p>
                 <div className="mt-auto">
                   <p className="text-brand-1 ft-4 font-bold">Eduardo P</p>
@@ -295,13 +303,16 @@ export default function Home() {
       <section className="py-16 bg-[#1c1c1c]">
         <div className="container grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="p-12 rounded-xl bg-brand-3 flex items-center">
-            <p className="ft-2 text-white text-center"><b>Más de 60 familias ya viven aquí:</b><br/> O sea, no eres el primero en descubrir esta joya</p>
+            <p className="ft-2 text-white text-center"><b>Más de 60 familias ya viven aquí:</b><br/> O sea, no eres el
+              primero en descubrir esta joya</p>
           </div>
           <div className="p-12 rounded-xl bg-brand-3 flex items-center">
-            <p className="ft-2 text-white text-center"><b>Plusvalía asegurada:</b><br/>Tu patrimonio crece sin que tengas que hacer nada.</p>
+            <p className="ft-2 text-white text-center"><b>Plusvalía asegurada:</b><br/>Tu patrimonio crece sin que
+              tengas que hacer nada.</p>
           </div>
           <div className="p-12 rounded-xl bg-brand-3 flex items-center">
-            <p className="ft-2 text-white text-center"><b>Garantía de 1 año</b><br/>Siempre hay vicios ocultos pero confiamos en lo que vendemos.</p>
+            <p className="ft-2 text-white text-center"><b>Garantía de 1 año</b><br/>Siempre hay vicios ocultos pero
+              confiamos en lo que vendemos.</p>
           </div>
         </div>
 
@@ -323,16 +334,32 @@ export default function Home() {
         <Faqs/>
       </section>
 
+      <div className='sticky bottom-0 overflow-hidden mt-20 z-50 border-t border-brand-2 shadow-[0_-6px_12px_rgba(0,0,0,0.25)]'>
+        <div className='-mx-8 flex bg-brand-5'>
+          <div className='container mt-0'>
+            <a
+              href={`https://wa.me/${info.whatsapp.value}`}
+              target="_blank"
+              className='ft-3 button hover:bg-brand-5 !mt-0 !w-full !py-8 !px-16'
+              onClick={() => fbEvent('Contact')}
+            >
+              <span className="filter invert mr-4"><Image src={whatsapp} width={24} height={24}/></span>
+              Mándanos un WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Contacto  */}
       <section id="contact" className="border-t border-brand-1 bg-brand-1 py-20">
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="!font-bold text-white">
-              Contáctanos hoy y conoce las promociones de {month}.
+              Visítanos en {month} y si compras antes del 30 de {endMonth}, te regalamos un año de mantenimiento.
             </h2>
             <div className="mt-20 mb-12">
               <p className="ft-1 text-white">
-                Si llegaste hasta acá, compártenos unos datos y te enviamos modelos, precios y promociones del mes.
+                Déjanos tus datos y programemos tu visita.
               </p>
             </div>
             <OptInForm
