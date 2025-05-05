@@ -110,7 +110,7 @@ export default function OptInForm({lastClick = ''}) {
             : <span className="material-symbols-outlined animate-spin">progress_activity</span>
         }</button>
 
-        <a href={`https://wa.me/${info.whatsapp.value}`} className="button-secondary !w-full">Prefiero enviar WhatsApp</a>
+        <a href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`} className="button-secondary !w-full">Prefiero enviar WhatsApp</a>
 
         <div className="mt-4">
           <p className="-ft-3 text-center text-white">Al dar clic aceptas nuestra&nbsp;

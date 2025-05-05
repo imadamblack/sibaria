@@ -341,7 +341,7 @@ export default function Home() {
         <div className='-mx-8 flex bg-brand-5'>
           <div className='container mt-0'>
             <a
-              href={`https://wa.me/${info.whatsapp.value}`}
+              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
               target="_blank"
               className='ft-3 button hover:bg-brand-5 !mt-0 !w-full !py-8 !px-16'
               onClick={() => fbEvent('Contact')}
